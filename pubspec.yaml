@@ -1,0 +1,43 @@
+name: smart_permission_flow
+description: A Flutter package that provides elegant and user-friendly permission request flows built on top of permission_handler.
+version: 0.0.1
+homepage: https://github.com/your-org/smart_permission_flow
+repository: https://github.com/your-org/smart_permission_flow
+issue_tracker: https://github.com/your-org/smart_permission_flow/issues
+
+topics:
+  - permissions
+  - permission-handler
+  - permission-ui
+  - onboarding
+  - flutter
+
+screenshots:
+  - description: Smart Permission Flow example app home screen.
+    path: screenshots/smart-permissions.png
+  - description: Compact camera permission request sheet.
+    path: screenshots/camera-access.png
+  - description: Multiple permission request sheet.
+    path: screenshots/permissions-required.png
+  - description: Notification permission request sheet.
+    path: screenshots/notification-access.png
+  - description: Settings recovery sheet for permanently denied permissions.
+    path: screenshots/enable-permission-in-settings.png
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  meta: ^1.16.0
+  permission_handler: ^12.0.1
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
