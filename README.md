@@ -180,19 +180,9 @@ For notifications, configure Apple notification capabilities as required by your
 
 Preview the compact permission flow and example app:
 
-### Example app
-
-![Smart Permission Flow example app](./screenshots/smart-permissions.png)
-
-### Permission sheets
-
-![Camera permission request sheet](./screenshots/camera-access.png)
-
-![Multiple permissions request sheet](./screenshots/permissions-required.png)
-
-![Notification permission request sheet](./screenshots/notification-access.png)
-
-![Enable permission in settings sheet](./screenshots/enable-permission-in-settings.png)
+| Example | Camera | Multiple | Notifications | Settings |
+| --- | --- | --- | --- | --- |
+| <img src="https://raw.githubusercontent.com/kartikhadiya09/smart-permission-flow/main/screenshots/smart-permissions.png" alt="Smart Permission Flow example app" width="120" /> | <img src="https://raw.githubusercontent.com/kartikhadiya09/smart-permission-flow/main/screenshots/camera-access.png" alt="Camera permission request sheet" width="120" /> | <img src="https://raw.githubusercontent.com/kartikhadiya09/smart-permission-flow/main/screenshots/permissions-required.png" alt="Multiple permissions request sheet" width="120" /> | <img src="https://raw.githubusercontent.com/kartikhadiya09/smart-permission-flow/main/screenshots/notification-access.png" alt="Notification permission request sheet" width="120" /> | <img src="https://raw.githubusercontent.com/kartikhadiya09/smart-permission-flow/main/screenshots/enable-permission-in-settings.png" alt="Enable permission in settings sheet" width="120" /> |
 
 ## API Overview
 

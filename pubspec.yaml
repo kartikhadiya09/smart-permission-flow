@@ -1,9 +1,9 @@
 name: smart_permission_flow
 description: A Flutter package that provides elegant and user-friendly permission request flows built on top of permission_handler.
 version: 0.0.1
-homepage: https://github.com/your-org/smart_permission_flow
-repository: https://github.com/your-org/smart_permission_flow
-issue_tracker: https://github.com/your-org/smart_permission_flow/issues
+homepage: https://github.com/kartikhadiya09/smart-permission-flow
+repository: https://github.com/kartikhadiya09/smart-permission-flow
+issue_tracker: https://github.com/kartikhadiya09/smart-permission-flow/issues
 
 topics:
   - permissions
