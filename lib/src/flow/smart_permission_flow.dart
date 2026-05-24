@@ -11,9 +11,25 @@ import '../widgets/smart_permission_sheet.dart';
 
 enum _PermissionFlowAction { continueRequest, retry, openSettings, cancel }
 
+/// Entry point for requesting permissions with a guided user experience.
+///
+/// This class provides a static [request] method that shows explanation UI,
+/// requests platform permissions through `permission_handler`, handles retry
+/// and settings recovery states, and returns a structured result.
 class SmartPermissionFlow {
+  /// Prevents creating instances of [SmartPermissionFlow].
   const SmartPermissionFlow._();
 
+  /// Requests one or more permissions using a guided user flow.
+  ///
+  /// This method automatically:
+  /// - shows a permission explanation UI,
+  /// - requests permissions,
+  /// - handles denied states,
+  /// - handles permanently denied states,
+  /// - and optionally opens app settings.
+  ///
+  /// Returns a [SmartPermissionResult] describing the final permission state.
   static Future<SmartPermissionResult> request(
     BuildContext context, {
     required List<SmartPermission> permissions,

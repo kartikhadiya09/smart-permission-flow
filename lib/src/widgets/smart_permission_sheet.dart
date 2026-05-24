@@ -6,18 +6,42 @@ import '../utils/platform_texts.dart';
 import 'permission_action_buttons.dart';
 import 'permission_icon.dart';
 
+/// Compact Material permission sheet used by [SmartPermissionFlow].
+///
+/// The sheet renders an icon, title, description, permission rows, and state
+/// aware actions for explanation, retry, settings, and success flows.
 class SmartPermissionSheet extends StatefulWidget {
+  /// Permissions represented in the sheet.
   final List<SmartPermission> permissions;
+
+  /// Visual and behavior options for the sheet.
   final SmartPermissionFlowOptions options;
+
+  /// Called when the user continues to the system permission prompt.
   final VoidCallback? onContinue;
+
+  /// Called when the user cancels or dismisses the flow.
   final VoidCallback? onCancel;
+
+  /// Called when the user retries denied permissions.
   final VoidCallback? onRetry;
+
+  /// Called when the user opens app settings.
   final VoidCallback? onOpenSettings;
+
+  /// Called when the user closes the success state.
   final VoidCallback? onDone;
+
+  /// Whether the sheet displays retry messaging and actions.
   final bool showRetry;
+
+  /// Whether the sheet displays settings recovery messaging and actions.
   final bool showOpenSettings;
+
+  /// Whether the sheet displays the success completion state.
   final bool showSuccess;
 
+  /// Creates a smart permission sheet.
   const SmartPermissionSheet({
     super.key,
     required this.permissions,

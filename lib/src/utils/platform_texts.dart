@@ -2,9 +2,12 @@ import 'dart:io' show Platform;
 
 import '../models/smart_permission_type.dart';
 
+/// Default English copy used by the built-in permission UI.
 class PlatformTexts {
+  /// Prevents creating instances of [PlatformTexts].
   const PlatformTexts._();
 
+  /// Returns the explanation title for the number of requested permissions.
   static String explanationTitle(int permissionCount) {
     if (permissionCount == 1) {
       return 'Permission Required';
@@ -12,6 +15,7 @@ class PlatformTexts {
     return 'Permissions Required';
   }
 
+  /// Returns the retry title for denied permissions.
   static String retryTitle(int permissionCount) {
     if (permissionCount == 1) {
       return 'Permission Was Denied';
@@ -19,6 +23,7 @@ class PlatformTexts {
     return 'Permissions Were Denied';
   }
 
+  /// Returns the settings recovery title for permanently denied permissions.
   static String settingsTitle(int permissionCount) {
     if (permissionCount == 1) {
       return 'Enable Permission in Settings';
@@ -26,6 +31,7 @@ class PlatformTexts {
     return 'Enable Permissions in Settings';
   }
 
+  /// Returns the success title for granted permissions.
   static String successTitle(int permissionCount) {
     if (permissionCount == 1) {
       return 'Permission Ready';
@@ -33,6 +39,7 @@ class PlatformTexts {
     return 'Permissions Ready';
   }
 
+  /// Returns the explanation message for requested permissions.
   static String explanationMessage(int permissionCount) {
     if (permissionCount == 1) {
       return 'Review why this access is needed before continuing.';
@@ -40,6 +47,7 @@ class PlatformTexts {
     return 'Review why these permissions are needed before continuing.';
   }
 
+  /// Returns the retry message for denied permissions.
   static String retryMessage(int permissionCount) {
     if (permissionCount == 1) {
       return 'This permission was denied. You can try again to continue.';
@@ -47,6 +55,7 @@ class PlatformTexts {
     return 'Some permissions were denied. You can try again to continue.';
   }
 
+  /// Returns the settings recovery message for permanently denied permissions.
   static String settingsMessage(int permissionCount) {
     final location = Platform.isIOS ? 'iOS Settings' : 'app settings';
     if (permissionCount == 1) {
@@ -55,6 +64,7 @@ class PlatformTexts {
     return 'These permissions can only be enabled from $location.';
   }
 
+  /// Returns the success message for granted permissions.
   static String successMessage(int permissionCount) {
     if (permissionCount == 1) {
       return 'You are all set. This feature is ready to use.';
@@ -62,6 +72,7 @@ class PlatformTexts {
     return 'You are all set. These features are ready to use.';
   }
 
+  /// Returns the default permission title for [type].
   static String defaultTitle(SmartPermissionType type) {
     return switch (type) {
       SmartPermissionType.camera => 'Camera Access',
@@ -73,6 +84,7 @@ class PlatformTexts {
     };
   }
 
+  /// Returns the default permission explanation for [type].
   static String defaultMessage(SmartPermissionType type) {
     return switch (type) {
       SmartPermissionType.camera =>
