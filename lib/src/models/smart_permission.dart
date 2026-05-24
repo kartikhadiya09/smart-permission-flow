@@ -2,13 +2,25 @@ import 'package:flutter/material.dart';
 
 import 'smart_permission_type.dart';
 
+/// Describes a permission request shown by the smart permission flow.
+///
+/// A permission includes the platform permission [type], a user-facing
+/// [reason], and presentation details such as [title] and [icon].
 @immutable
 class SmartPermission {
+  /// The permission category to request.
   final SmartPermissionType type;
+
+  /// A short explanation shown before the system permission prompt.
   final String reason;
+
+  /// The title shown in the permission explanation UI.
   final String title;
+
+  /// The icon used to visually represent this permission.
   final IconData icon;
 
+  /// Creates a custom smart permission descriptor.
   const SmartPermission({
     required this.type,
     required this.reason,
@@ -16,6 +28,10 @@ class SmartPermission {
     required this.icon,
   });
 
+  /// Creates a camera permission request.
+  ///
+  /// Use this when a feature needs camera access for taking photos,
+  /// scanning codes, or capturing media.
   factory SmartPermission.camera({
     required String reason,
     String title = 'Camera Access',
@@ -29,6 +45,9 @@ class SmartPermission {
     );
   }
 
+  /// Creates a location permission request.
+  ///
+  /// This maps to foreground location access through `permission_handler`.
   factory SmartPermission.location({
     required String reason,
     String title = 'Location Access',
@@ -42,6 +61,9 @@ class SmartPermission {
     );
   }
 
+  /// Creates a microphone permission request.
+  ///
+  /// Use this when recording voice, audio notes, or media with sound.
   factory SmartPermission.microphone({
     required String reason,
     String title = 'Microphone Access',
@@ -55,6 +77,9 @@ class SmartPermission {
     );
   }
 
+  /// Creates a notification permission request.
+  ///
+  /// This is especially relevant on iOS and Android 13 or newer.
   factory SmartPermission.notification({
     required String reason,
     String title = 'Notification Access',
@@ -68,6 +93,9 @@ class SmartPermission {
     );
   }
 
+  /// Creates a photo library permission request.
+  ///
+  /// Use this when users need to select images or media from their device.
   factory SmartPermission.photos({
     required String reason,
     String title = 'Photo Library Access',
@@ -81,6 +109,9 @@ class SmartPermission {
     );
   }
 
+  /// Creates a storage permission request.
+  ///
+  /// Use this for file-based flows that require storage access.
   factory SmartPermission.storage({
     required String reason,
     String title = 'Storage Access',

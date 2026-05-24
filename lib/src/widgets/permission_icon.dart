@@ -1,12 +1,26 @@
 import 'package:flutter/material.dart';
 
+/// Compact icon container used by the built-in permission UI.
+///
+/// This widget is exported so advanced users can reuse the same icon treatment
+/// when composing custom permission experiences.
 class PermissionIcon extends StatelessWidget {
+  /// Icon displayed inside the container.
   final IconData icon;
+
+  /// Icon color. Defaults to the current theme primary color.
   final Color? color;
+
+  /// Background color behind the icon.
   final Color? backgroundColor;
+
+  /// Square size of the icon container.
   final double size;
+
+  /// Whether to draw a subtle elevation shadow.
   final bool elevated;
 
+  /// Creates a permission icon.
   const PermissionIcon({
     super.key,
     required this.icon,

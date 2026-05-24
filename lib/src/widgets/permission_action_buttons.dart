@@ -2,17 +2,39 @@ import 'package:flutter/material.dart';
 
 import '../models/smart_permission_flow_options.dart';
 
+/// Action button group used by the built-in permission sheet.
+///
+/// The widget adapts the primary button label and icon for explanation, retry,
+/// settings, and success states.
 class PermissionActionButtons extends StatelessWidget {
+  /// Visual and text options for the permission flow.
   final SmartPermissionFlowOptions options;
+
+  /// Called when the secondary cancel action is pressed.
   final VoidCallback? onCancel;
+
+  /// Called when the user continues from the explanation step.
   final VoidCallback? onContinue;
+
+  /// Called when the user retries denied permissions.
   final VoidCallback? onRetry;
+
+  /// Called when the user chooses to open app settings.
   final VoidCallback? onOpenSettings;
+
+  /// Called when the success state is dismissed.
   final VoidCallback? onDone;
+
+  /// Whether the buttons should show retry copy and behavior.
   final bool showRetry;
+
+  /// Whether the buttons should show settings recovery copy and behavior.
   final bool showOpenSettings;
+
+  /// Whether the buttons should show success completion copy and behavior.
   final bool showSuccess;
 
+  /// Creates permission action buttons.
   const PermissionActionButtons({
     super.key,
     required this.options,
